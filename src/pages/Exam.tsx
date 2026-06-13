@@ -13,12 +13,12 @@ export default function Exam() {
   return (
     <>
       <PageHead eyebrow="High School Admission" title="고입입시반"
-        subtitle="외고 · 국제고 · 자사고 · 과학고. 영어 면접부터 자소서·학생부까지 한 곳에서 완성합니다." crumb="홈 / 고입입시" />
+        subtitle="외고 · 국제고 · 자사고 · 과학고. 제시문 면접부터 자소서·학생부까지 한 곳에서 완성합니다." crumb="홈 / 고입입시" />
 
       <section className="py-24 max-md:py-16">
         <div className="max-w-container mx-auto px-6">
-          <SectionHead eyebrow="Target Schools" title="지망교별 맞춤 전략"
-            desc="학교마다 평가 방식이 다릅니다. 지망교에 맞춰 다르게 준비합니다." />
+          <SectionHead eyebrow="Target Schools" title=" 고입 입시 맞춤 전략"
+            desc="학교마다 평가 방식이 다릅니다. 지원 고등학교에 맞춰 다르게 준비합니다." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {examCards.map((c) => <GradeCard key={c.title} card={c} />)}
           </div>

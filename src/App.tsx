@@ -13,6 +13,7 @@ import Contact from './pages/Contact'
 import Admin from './pages/Admin'
 import Policy from './pages/Policy'
 import Gallery from './pages/Gallery'
+import Notices from './pages/Notices'
 
 function Layout({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation()
@@ -39,6 +40,8 @@ export default function App() {
           <Route path="/middle" element={<Middle />} />
           <Route path="/exam" element={<Exam />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/notices" element={<Notices />} />
+          <Route path="/notices/:id" element={<Notices />} />
           <Route path="/teachers" element={<Teachers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/fee" element={<Policy type="fee" />} />

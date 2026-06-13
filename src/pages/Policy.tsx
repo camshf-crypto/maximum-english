@@ -3,20 +3,20 @@ import { site } from '../data/content'
 
 // ===== 수강료 표 (실제 학원 수강료로 수정하세요) =====
 const feeRows = [
-  { course: '초등 저학년 영어 시작반', target: 'AR 1~2점대', fee: '244,000원' },
-  { course: '초등 영어원서', target: 'AR 2~5점대', fee: '335,000원' },
-  { course: '예비중 ~ 중1', target: 'AR 4~6점대 · 특목 준비 시작반', fee: '400,000원' },
-  { course: '중등부 특목 대비반', target: '뉴베리·역사·철학 영어원서 & Writing · 외고/국제고 준비', fee: '450,000원' },
-  { course: '중등부 특목 심화반', target: '영어원서 & TOEFL Writing · 외고/국제고 심화', fee: '600,000원' },
-  { course: '중등부 기본 과정', target: '중등 통합 기초 다지기', fee: '270,000원' },
-  { course: '중등부 실력 과정', target: '중등 통합 실력 다지기', fee: '335,000원' },
-  { course: '중등부 심화 과정', target: '중등 통합 심화 역량 완성', fee: '400,000원' },
-  { course: '중등부 최상위 과정', target: '중등 최상위 완성 과정', fee: '800,000원' },
-  { course: '고1 기본 과정', target: '고등 기본 역량 강화 과정', fee: '350,000원' },
-  { course: '고1 모의고사반', target: '고1 모의고사 중심', fee: '400,000원' },
-  { course: '고2 모의고사반', target: '고2 모의고사 집중 실전 과정', fee: '500,000원' },
-  { course: '고3 모의고사반', target: '대학입시 수능 완성 과정', fee: '600,000원' },
-  { course: '고등부 최상위 과정', target: '고등 모의고사 심화 과정', fee: '900,000원' },
+  { course: '초등 저학년 영어 시작반', fee: '244,000원' },
+  { course: '초등 영어원서', fee: '335,000원' },
+  { course: '예비중 ~ 중1', fee: '400,000원' },
+  { course: '중등부 특목 대비반', fee: '450,000원' },
+  { course: '중등부 특목 심화반', fee: '600,000원' },
+  { course: '중등부 기본 과정', fee: '270,000원' },
+  { course: '중등부 실력 과정', fee: '335,000원' },
+  { course: '중등부 심화 과정', fee: '400,000원' },
+  { course: '중등부 최상위 과정', fee: '800,000원' },
+  { course: '고1 기본 과정', fee: '350,000원' },
+  { course: '고1 모의고사반', fee: '400,000원' },
+  { course: '고2 모의고사반', fee: '500,000원' },
+  { course: '고3 모의고사반', fee: '600,000원' },
+  { course: '고등부 최상위 과정', fee: '900,000원' },
 ]
 
 const payMethods = [
@@ -63,27 +63,26 @@ export default function Policy({ type }: { type: 'fee' | 'privacy' | 'terms' }) 
       <>
         <PageHead eyebrow="Tuition" title="수강료 안내" subtitle="과정별 월 교습비 안내입니다. 자세한 사항은 학원으로 문의해 주세요." crumb="홈 / 수강료 안내" />
         <section className="py-20 max-md:py-14">
-          <div className="max-w-[920px] mx-auto px-6">
+          <div className="max-w-[720px] mx-auto px-6">
             {/* 수강료 표 */}
             <div className="overflow-x-auto mb-16">
               <table className="w-full border-collapse bg-cream rounded-2xl overflow-hidden border border-line" style={{ boxShadow: '0 16px 40px -28px rgba(11,37,33,.4)' }}>
                 <thead>
                   <tr>
-                    <th className="bg-green-800 text-gold-light text-[14.5px] font-semibold px-5 py-4 text-left tracking-wide" style={{ width: 200 }}>과정명</th>
-                    <th className="bg-green-800 text-gold-light text-[14.5px] font-semibold px-5 py-4 text-left tracking-wide">대상 / 내용</th>
-                    <th className="bg-green-800 text-gold-light text-[14.5px] font-semibold px-5 py-4 text-right tracking-wide" style={{ width: 130 }}>월 수강료</th>
+                    <th className="bg-green-800 text-gold-light text-[14.5px] font-semibold px-5 py-4 text-left tracking-wide">과정명</th>
+                    <th className="bg-green-800 text-gold-light text-[14.5px] font-semibold px-5 py-4 text-left tracking-wide" style={{ width: 160 }}>월 수강료</th>
                   </tr>
                 </thead>
                 <tbody>
                   {feeRows.map((r, i) => (
                     <tr key={i} className={i % 2 ? 'bg-cream-2/50' : ''}>
                       <td className="px-5 py-4 border-b border-line text-[14px] font-semibold text-green-800 align-top">{r.course}</td>
-                      <td className="px-5 py-4 border-b border-line text-[13.5px] text-ink-muted font-light align-top">{r.target}</td>
-                      <td className="px-5 py-4 border-b border-line text-[14px] font-bold text-gold-deep text-right whitespace-nowrap align-top">{r.fee}</td>
+                      <td className="px-5 py-4 border-b border-line text-[14px] font-bold text-gold-deep text-left whitespace-nowrap align-top">{r.fee}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+              <p className="text-[12.5px] text-ink-muted font-light mt-3">* 수강료는 학원 사정에 따라 변경될 수 있습니다. 정확한 금액은 학원으로 문의해 주세요.</p>
             </div>
 
             {/* 납부 방법 */}
@@ -101,17 +100,13 @@ export default function Policy({ type }: { type: 'fee' | 'privacy' | 'terms' }) 
             {/* 환불 기준 */}
             <h3 className="text-[20px] font-bold text-green-800 mb-2">수강료 환불 기준</h3>
             <p className="text-[13.5px] text-ink-muted font-light mb-5">수강료 환불 기준은 교육청 수강료 환불 기준을 준수하며, 월 단위로 적용됩니다.</p>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse bg-cream rounded-2xl overflow-hidden border border-line">
-                <tbody>
-                  {refundRows.map((r, i) => (
-                    <tr key={i} className={i % 2 ? 'bg-cream-2/50' : ''}>
-                      <td className="px-5 py-4 border-b border-line text-[14px] font-semibold text-green-800 align-top" style={{ width: 280 }}>{r[0]}</td>
-                      <td className="px-5 py-4 border-b border-line text-[14px] text-ink-muted font-light align-top">{r[1]}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="bg-cream rounded-2xl overflow-hidden border border-line">
+              {refundRows.map((r, i) => (
+                <div key={i} className={`flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 px-5 py-4 ${i !== refundRows.length - 1 ? 'border-b border-line' : ''} ${i % 2 ? 'bg-cream-2/50' : ''}`}>
+                  <div className="text-[14px] font-semibold text-green-800 sm:w-[280px] sm:flex-none">{r[0]}</div>
+                  <div className="text-[14px] text-ink-muted font-light">{r[1]}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

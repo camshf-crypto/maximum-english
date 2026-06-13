@@ -19,6 +19,7 @@ const nav = [
   },
   { label: '고입입시', to: '/exam' },
   { label: '수업 클래스', to: '/gallery' },
+  { label: '공지사항', to: '/notices' },
 ]
 
 export default function Header() {
@@ -83,10 +84,10 @@ export default function Header() {
       {open && (
         <div className="fixed inset-0 z-[100] md:hidden" onClick={() => setOpen(false)}>
           <div className="absolute inset-0 bg-green-900/40" />
-          <div className="absolute top-0 right-0 h-full w-[78%] max-w-[320px] bg-white overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="absolute inset-0 h-full w-full bg-white overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
             <div className="p-6 min-h-full flex flex-col">
               <button className="absolute top-5 right-5 text-2xl text-green-700 z-10" onClick={() => setOpen(false)} aria-label="닫기">&times;</button>
-              <h6 className="text-[12px] text-gold-deep tracking-widest mt-4 mb-3 uppercase">메뉴</h6>
+              <h6 className="text-[12px] text-gold-deep tracking-widest mt-4 mb-3 uppercase"></h6>
 
               {nav.map((item) => (
                 <div key={item.label} className="border-b border-line">

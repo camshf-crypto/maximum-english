@@ -55,7 +55,7 @@ export default function Contact() {
   return (
     <>
       <PageHead eyebrow="Admission & Contact" title="입학상담 예약"
-        subtitle="무료 레벨테스트와 학습 상담으로 시작하세요. 가장 알맞은 반과 방향을 안내해 드립니다." crumb="입학상담" />
+        subtitle="레벨테스트와 학습 상담으로 시작하세요. 가장 알맞은 반과 방향을 안내해 드립니다." crumb="입학상담" />
 
       <section className="py-24 max-md:py-16">
         <div className="max-w-container mx-auto px-6">

@@ -36,18 +36,18 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-white border-b border-line">
         <div className="relative max-w-container mx-auto px-6 py-16 max-md:py-12 grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
-          <div>
+          <div className="text-center md:text-left">
             <div className="text-[14px] tracking-[0.18em] text-green-700 font-semibold mb-1.5">초 등 · 중 등 · 고 입 입 시</div>
-            <h1 className="text-[62px] max-md:text-[42px] font-extrabold leading-[1.06] tracking-[-0.025em] mt-5 mb-5 text-green-800">
+            <h1 className="text-[62px] max-md:text-[40px] font-extrabold leading-[1.06] tracking-[-0.025em] mt-5 mb-5 text-green-800">
               실력의 <em className="not-italic text-green-600">최대치</em>를<br />끌어내는 영어교육
             </h1>
-            <p className="text-[17px] text-ink-muted max-w-[480px] leading-[1.85] font-light">
-              기초부터 고입입시까지, 한 명 한 명의 성장 곡선을 설계합니다. 체계적인 4대 영역 학습과 담임 밀착 관리로 실력과 성적을 함께 키웁니다.
+            <p className="text-[17px] text-ink-muted max-w-[480px] mx-auto md:mx-0 leading-[1.85] font-light">
+              기초부터 고입입시까지, 개인맞춤 성장 곡선을 설계합니다. 체계적인 4대 영역 학습과 담임 밀착 관리로 실력과 성적을 함께 키웁니다.
             </p>
-            <div className="flex gap-3.5 mt-8.5 flex-wrap" style={{ marginTop: 34 }}>
+            <div className="flex gap-3.5 mt-8.5 flex-wrap justify-center md:justify-start" style={{ marginTop: 34 }}>
               <Link to="/curriculum" className="bg-green-800 text-cream font-bold px-7.5 py-3.5 rounded-full text-[14.5px] hover:bg-green-700 hover:-translate-y-0.5 transition-all" style={{ padding: '15px 30px' }}>커리큘럼 보기</Link>
             </div>
-            <div className="flex gap-8.5 mt-12 pt-7.5 border-t border-line flex-wrap" style={{ gap: 34, marginTop: 48, paddingTop: 30 }}>
+            <div className="flex gap-8.5 mt-12 pt-7.5 border-t border-line flex-wrap justify-center md:justify-start" style={{ gap: 34, marginTop: 48, paddingTop: 30 }}>
               {[['4대', '영역 통합 학습'], ['1:1', '담임 밀착 관리'], ['12년', '영어교육']].map(([n, l]) => (
                 <div key={l}>
                   <div className="text-[38px] font-extrabold text-green-700 leading-none">{n}</div>
@@ -184,7 +184,7 @@ export default function Home() {
       {/* 공지 */}
       <section className="py-24 max-md:py-16">
         <div className="max-w-container mx-auto px-6">
-          <SectionHead eyebrow="Notice" title="학원 소식" left />
+          <SectionHead eyebrow="Notice" title="공지 사항" left />
           <div className="border-t-2 border-green-700">
             {notices.map((n) => (
               <a key={n.ti} href="#" className="grid grid-cols-[auto_1fr_auto] gap-4.5 items-center py-5 px-1.5 border-b border-line hover:bg-cream-2 transition-all" style={{ gap: 18 }}>

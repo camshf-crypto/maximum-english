@@ -17,8 +17,8 @@ export default {
           deep: '#A9854B',
         },
         cream: {
-          DEFAULT: '#F7F4EC',
-          2: '#EFE9DB',
+          DEFAULT: '#FFFFFF',
+          2: '#F7F8F7',
         },
         ink: {
           DEFAULT: '#1A2421',
