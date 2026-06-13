@@ -34,12 +34,8 @@ export default function Header() {
       {/* header (흰 배경) */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-line">
         <div className="max-w-container mx-auto px-6 h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3.5">
-            <Crest className="w-[42px] h-[42px]" />
-            <span className="flex flex-col leading-none">
-              <span className="font-extrabold text-[22px] tracking-[0.16em] text-green-800">MAXIMUM</span>
-              <span className="text-[11px] tracking-[0.42em] text-green-700/60 mt-1">영 어 학 원</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            <img src="/logo-navy.png" alt="MAXIMUM ENGLISH" className="h-16 w-auto" />
           </Link>
 
           {/* desktop nav */}

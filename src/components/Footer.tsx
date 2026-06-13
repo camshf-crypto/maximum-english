@@ -15,16 +15,15 @@ export default function Footer() {
 
         {/* 학원 정보 */}
         <div className="pt-9 pb-8">
-          <div className="flex items-center gap-3 mb-5">
-            <Crest className="w-9 h-9" />
-            <span className="font-bold text-[17px] text-cream tracking-wide">{site.nameKo}</span>
+          <div className="mb-5 -ml-10">
+            <img src="/logo-gold.png" alt="MAXIMUM ENGLISH" className="h-16 w-auto" />
           </div>
-          <p className="text-[13px] font-light text-cream/55 leading-relaxed mb-1.5">
-            주소 : {site.address}
-          </p>
-          <p className="text-[13px] font-light text-cream/55 leading-relaxed">
-            전화번호 : {site.phone} <span className="mx-2 text-cream/25">ㅣ</span> 상담시간 : {site.hours} <span className="mx-2 text-cream/25">ㅣ</span> 학원등록번호 : {site.regNo}
-          </p>
+          <div className="text-[13px] font-light text-cream/55 leading-relaxed space-y-1.5">
+            <p>주소 : {site.address}</p>
+            <p>전화번호 : {site.phone}</p>
+            <p>상담시간 : {site.hours}</p>
+            <p>학원등록번호 : {site.regNo}</p>
+          </div>
         </div>
 
         {/* 하단: 카피라이트 + SNS */}
